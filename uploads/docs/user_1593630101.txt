@@ -1,0 +1,56 @@
+Exampl Photos  API :
+	example_photo_id
+	example_photo_link
+
+Add One Model API:
+	height:
+	dress_size:
+	shoe_size:
+	hair_color:
+	eyes_color:
+	photo_1:
+	photo_2:
+	photo_3:
+	photo_4:
+	more_photo_1:
+	more_photo_2:
+	more_photo_3:
+	more_photo_4:
+
+Scout API:
+	sex: fimale/male
+	name:
+
+Personal API:
+	first_name:
+	last_name:
+	birthday:
+	email_address:
+	email_parents:
+	phone:
+	gender:
+	country:
+	city:
+
+Look and physiques:
+	height:
+	dress_size:
+	shoe_size:
+	hair_color:
+	eyes_color:
+	ethinicity:
+
+Change Password API:
+	current_password:
+	new_password:
+
+All to know about modeling API:
+	model_name:
+	model_photo:
+	model_detail:
+		model_photo_list:[photo1, photo2, photo3, ...]
+		model_detail_title:
+		model_detail_description_1:
+		model_detail_description_photo:
+		model_detail_description_2:
+		model_detail_contact_mail:
