@@ -6,7 +6,7 @@
 		function __construct()
 		{
 			parent::__construct();
-			$this->load->model('Contentmodel');
+			$this->load->model('contentmodel');
 			$this->load->model('categorymodel');
 			$this->load->model('notifymodel');
 		}
