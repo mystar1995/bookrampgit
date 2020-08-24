@@ -1,5 +1,5 @@
 <?php 
-	
+	if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	class Notifymodel extends CI_Model
 	{
 		function __construct()
