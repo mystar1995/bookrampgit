@@ -64,7 +64,7 @@
  * By default development will show errors but testing and live will hide them.
  */
 
-header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Credentials',true);
 
 
 switch (ENVIRONMENT)
