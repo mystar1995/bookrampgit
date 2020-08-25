@@ -166,10 +166,10 @@
 					}
 
 
-					if(isset($rating_content[$content['id']]))
+					if(isset($ratings[$content['id']]))
 					{
-						$content['review'] = $rating_content[$content['id']]['review'];
-						$content['rating'] = $rating_content[$content['id']]['rating']/$rating_content[$content['id']]['review'];
+						$content['review'] = $ratings[$content['id']]['review'];
+						$content['rating'] = $ratings[$content['id']]['rating']/$ratings[$content['id']]['review'];
 						
 					}
 
