@@ -309,7 +309,7 @@
 			{
 				//$exist = $this->validate_user($data,get_authorization($header));
 
-				$config['upload_path'] = 'C:\xampp\htdocs\bookramp\uploads\user';
+				$config['upload_path'] = '/opt/lampp/htdocs/bookrampgit/uploads/user';
 				$config['allowed_types'] = '*';
 				$config['max_size']             = 10000;
 		        $config['max_width']            = 10240;

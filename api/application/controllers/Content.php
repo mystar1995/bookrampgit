@@ -231,11 +231,11 @@
 			{
 				$data = $this->input->post();
 
-				$config_coverimage['upload_path'] = 'C:\xampp\htdocs\bookramp\uploads\books';
+				$config_coverimage['upload_path'] = '/opt/lampp/htdocs/bookrampgit/uploads/books';
 				$config_coverimage['allowed_types'] = '*';
 				$config_coverimage['max_size']             = 1000000;
-		        $config_coverimage['max_width']            = 10240;
-		        $config_coverimage['max_height']           = 7680;
+		        $config_coverimage['max_width']            = 3000;
+		        $config_coverimage['max_height']           = 3000;
 		        $config_coverimage['file_name']			= "user_" . time() ;
 
 		        $this->load->library('upload',$config_coverimage);
@@ -246,14 +246,14 @@
 		        	$file_name = $this->upload->data('file_name');
 		        	$data['cover_image'] = 'uploads/books/' . $file_name;
 		        }
-		        else
+		        else if(isset($_FILE['file_name']))
 		        {
 		        	echo json_encode(array('success'=>false,'message'=>$this->upload->display_errors()));
 		        	return;
 		        	//var_dump($this->upload->display_errors());
 		        }
 
-		        $config['upload_path'] = 'C:\xampp\htdocs\bookramp\uploads\docs';
+		        $config['upload_path'] = '/opt/lampp/htdocs/bookrampgit/uploads/docs';
 				$config['allowed_types'] = '*';
 				$config['max_size']             = 1000000;
 		        $config['max_width']            = 10240;
