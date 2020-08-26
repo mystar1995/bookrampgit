@@ -181,7 +181,7 @@
 				{
 					return;
 				}
-				else if($routename == 'payments' && $routename != 'reader' && $user['user_type'] == 'writer')
+				else if($routename == 'payments' && $routename2 != 'reader' && $user['user_type'] == 'writer')
 				{
 					redirect('books/published');
 				}
