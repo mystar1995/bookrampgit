@@ -246,7 +246,7 @@
 		        	$file_name = $this->upload->data('file_name');
 		        	$data['cover_image'] = 'uploads/books/' . $file_name;
 		        }
-		        else if(isset($_FILE['cover_image']))
+		        else
 		        {
 		        	echo json_encode(array('success'=>false,'message'=>$this->upload->display_errors()));
 		        	return;
