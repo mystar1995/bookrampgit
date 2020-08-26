@@ -10,7 +10,7 @@
 		function check_valid($content)
 		{
 			$profinity = get_setting('profanity');
-			$profinity_array = preg_split("\n", $profinity);
+			$profinity_array = preg_split("/\n/", $profinity);
 
 			if(!$profanity)
 			{
