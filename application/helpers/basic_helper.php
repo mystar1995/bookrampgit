@@ -177,6 +177,10 @@
 				$routename2 = $CI->uri->segment(2);
 				$routename3 = $CI->uri->segment(3);
 
+				var_dump($routename);
+				var_dump($routename2);exit;
+
+
 				if($routename == 'reader' && $routename2 == 'add' && $routename3 == get_user_id())
 				{
 					return;
