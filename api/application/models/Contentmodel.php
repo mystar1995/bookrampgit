@@ -12,7 +12,7 @@
 			$profinity = get_setting('profanity');
 			$profinity_array = preg_split("/\n/", $profinity);
 
-			if(!$profanity)
+			if(!$profinity)
 			{
 				return false;
 			}
