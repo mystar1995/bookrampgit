@@ -18,7 +18,7 @@
 			}
 
 			foreach ($profinity_array as $key => $item) {
-				if(str_contains($content,$item))
+				if(strpos(' ' . $content,$item))
 				{
 					return $item;
 				}
