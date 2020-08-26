@@ -249,6 +249,7 @@
 		        else
 		        {
 		        	echo json_encode(array('success'=>false,'message'=>$this->upload->display_errors()));
+		        	return;
 		        	//var_dump($this->upload->display_errors());
 		        }
 
