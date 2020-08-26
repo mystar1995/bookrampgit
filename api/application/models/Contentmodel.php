@@ -713,9 +713,9 @@
 				$data['status'] = isset($data['status'])?$data['status']:'UNDERREVIEW';
 
 				$profanity = $this->check_valid($data['book_content']);
-				if($profinity)
+				if($profanity)
 				{
-					return array('success'=>false,'message'=>'Book Content has profanity word ' . $profinity);
+					return array('success'=>false,'message'=>'Book Content has profanity word ' . $profanity);
 				}
 
 				if(isset($data['id']))
