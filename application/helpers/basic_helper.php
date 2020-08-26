@@ -181,6 +181,10 @@
 				{
 					return;
 				}
+				else if($routename == 'payments' && $routename != 'reader' && $user['user_type'] == 'writer')
+				{
+					redirect('books/published');
+				}
 				else if($routename != 'books')
 				{
 					redirect('/books/published');
@@ -282,7 +286,7 @@
 								</a>
 							</li>
 							<li class="">
-								<a href="' . base_url() . 'books/payments/reader" class="waves-effect waves-dark">
+								<a href="' . base_url() . 'payments/reader" class="waves-effect waves-dark">
 									<span class="pcoded-mtext">Payments</span>
 								</a>
 							</li>
