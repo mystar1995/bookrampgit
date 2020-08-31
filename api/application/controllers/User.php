@@ -39,7 +39,7 @@
 		function createservice()
 		{
 			$sid = "ACf12e12a261df45a782f4352717246a7d";
-			$token = "677a1f39efb8dae5aef825913c2cecb7";
+			$token = "af05f6f7f51cc423ffe47842852adf41";
 			$twilio = new Client($sid, $token);
 			$service = $twilio->verify->v2->services->create('Your Bookramp Account');
 			var_dump($service);
