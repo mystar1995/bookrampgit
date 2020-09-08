@@ -546,7 +546,7 @@
 
 			if($user)
 			{
-				$query = "select content.* from content,reader_history where reader_history.content_id = content.id and content.author = " . $user['id'] . ' order by content.created_at DESC' ;
+				$query = "select content.* from content,reader_history where reader_history.content_id = content.id and reader_history.reader_id = " . $user['id'] . ' order by content.created_at DESC' ;
 
 				$contents = $this->db->query($query)->result_array();
 

@@ -33,7 +33,6 @@
 				var_dump($e->getMessage());
 				return false;
 			}
-
 		}
 
 		function createservice()
@@ -226,15 +225,19 @@
 					$data['status'] = 'UNDERREVIEW';
 				}
 
-				if($this->send_verification($data['phone_number']))
-				{
-					$this->usermodel->add_user($data);	
-					echo json_encode(array('success'=>true,'phone'=>$data['phone_number']));
-				}
-				else
-				{
-					echo json_encode(array('error'=>array(['phone_number'=>'Phone Number is not valid'])));
-				}
+				$this->usermodel->add_user($data);
+
+				echo json_encode(array('success'=>true));
+
+				// if($this->send_verification($data['phone_number']))
+				// {
+				// 	$this->usermodel->add_user($data);	
+				// 	echo json_encode(array('success'=>true,'phone'=>$data['phone_number']));
+				// }
+				// else
+				// {
+				// 	echo json_encode(array('error'=>array(['phone_number'=>'Phone Number is not valid'])));
+				// }
 			}
 			else
 			{

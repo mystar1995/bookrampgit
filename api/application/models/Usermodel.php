@@ -82,7 +82,7 @@
 			}
 			else
 			{
-				$user['status'] = 'INACTIVE';
+				//$user['status'] = 'INACTIVE';
 				$this->db->insert('user',$user);
 			}
 		}
