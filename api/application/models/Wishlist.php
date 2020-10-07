@@ -13,7 +13,7 @@
 			$user = check_user($credentials);
 			if($user)
 			{
-				$query = 'Select content.*, wishlist.*,user.username as authorName from wishlist,content,user where wishlist.content_id = content.id and wishlist.reader_id = ' . $user['id'] . ' and user.id = content.author';
+				$query = 'Select content.*, wishlist.*,user.username as authorName,user.rewards as authorrewards from wishlist,content,user where wishlist.content_id = content.id and wishlist.reader_id = ' . $user['id'] . ' and user.id = content.author';
 
 				$contents = $this->db->query($query)->result_array();
 
