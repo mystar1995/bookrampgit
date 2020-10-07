@@ -33,7 +33,7 @@
 
 			if($user)
 			{
-				$query = 'Select content.*, user.username as authorName from content,user where content.author = user.id and content.status = "PUBLISHED" order by created_at DESC';
+				$query = 'Select content.*, user.username as authorName,user.rewards as authorrewards from content,user where content.author = user.id and content.status = "PUBLISHED" order by created_at DESC';
 				$contents =  $this->db->query($query)->result_array();
 
 				$age_group = explode('~', $user['age_group']);
@@ -142,7 +142,7 @@
 			if($user)
 			{	
 				$age_group = explode('~', $user['age_group']);
-				$query = 'Select content.*,user.username as authorName from content,user where content.title like "%' . $search . '%" and content.status = "PUBLISHED" and content.author = user.id';
+				$query = 'Select content.*,user.username as authorName,user.rewards as authorrewards from content,user where content.title like "%' . $search . '%" and content.status = "PUBLISHED" and content.author = user.id';
 				if($category)
 				{
 					$query .= " and content.category = " . $category;
@@ -234,6 +234,7 @@
 					$this->db->where('id',$content['author']);
 					$author = $this->db->get('user')->row_array();
 					$content['authorName'] = $author['username'];
+					$content['authorrewards'] = $author['rewards'];
 					$content['rating'] = 0; $content['review'] = 0;
 
 					if($rating)
@@ -657,7 +658,7 @@
 
 			$age = $date_now->format('Y') - $date_birth->format('Y');
 
-			$query = 'Select content.*,user.username as authorName from content,user where content.author = user.id and content.recommended = 1 and content.status = "PUBLISHED" and content.age_group <= ' . $age . ' order by content.created_at DESC';
+			$query = 'Select content.*,user.username as authorName,user.rewards as authorrewards from content,user where content.author = user.id and content.recommended = 1 and content.status = "PUBLISHED" and content.age_group <= ' . $age . ' order by content.created_at DESC';
 			$contents = $this->db->query($query)->result_array();
 
 			$ratings = $this->getratings();
