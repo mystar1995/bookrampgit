@@ -129,7 +129,7 @@
 										<div class="col-xl-6 col-md-12">
 											<select class="form-control" name="age_group">
 												<?php foreach($age_group as $age){?>
-												<option value="<?php echo $age;?>" <?php echo $book['age_group'] == $age?'selected':'';?>><?php echo $age;?>+</option>
+												<option value="<?php echo $age;?>" <?php echo (isset($book['age_group']) && $book['age_group'] == $age)?'selected':'';?>><?php echo $age;?>+</option>
 												<?php }?>
 											</select>
 										</div>
