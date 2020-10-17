@@ -111,7 +111,7 @@
 				{
 					$role = 'writer';
 
-					if($user['role'] == 'writer')
+					if($user['user_type'] == 'writer')
 					{
 						$role = 'reader';
 					}
