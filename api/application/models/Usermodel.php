@@ -65,10 +65,10 @@
 			}
 		}
 
-		public function switchuser($id)
+		public function switchuser($id,$role)
 		{
 			$this->db->where('id',$id);
-			$this->db->set('user_type',"writer");
+			$this->db->set('user_type',$role);
 			$this->db->update('user');
 		}
 

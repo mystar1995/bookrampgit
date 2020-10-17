@@ -115,7 +115,7 @@
 					{
 						$role = 'reader';
 					}
-					$this->usermodel->switchuser($user['id']);
+					$this->usermodel->switchuser($user['id'],$role);
 					echo json_encode(array('success'=>true));
 				}
 			}
