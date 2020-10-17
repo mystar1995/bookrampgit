@@ -136,7 +136,13 @@
 											if($user['country'] == $country['code'])
 											{
 												$phonecode = '+' . $country['phonecode'];
-												$mobilenumber = explode($phonecode, $user['phone_number'])[1];
+												$phone_num_array = explode($phonecode, $user['phone_number']);
+
+												if(count($phone_num_array) > 0)
+												{
+													$mobilenumber = $phone_num_array[count($phone_num_array) - 1];
+												}
+												
 												break;
 											}
 										}
