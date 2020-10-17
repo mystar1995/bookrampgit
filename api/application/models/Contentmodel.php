@@ -196,7 +196,7 @@
 
 				if($author)
 				{
-					$this->db->query('update user set point = point + 1 where id = ' . $author['id']);	
+					$this->db->query('update user set rewards = rewards + 1 where id = ' . $author['id']);	
 				}
 				
 				$this->db->query('update content set point = point + 1 where id = ' . $content['id']);
