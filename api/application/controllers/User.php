@@ -109,6 +109,12 @@
 				$user = check_user(get_authorization($header));
 				if($user)
 				{
+					$role = 'writer';
+
+					if($user['role'] == 'writer')
+					{
+						$role = 'reader';
+					}
 					$this->usermodel->switchuser($user['id']);
 					echo json_encode(array('success'=>true));
 				}
