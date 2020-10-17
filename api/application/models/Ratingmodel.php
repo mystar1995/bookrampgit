@@ -30,7 +30,23 @@
 			if($user)
 			{
 				$rating['reader'] = $user['id'];
-				$this->db->insert('rating',$rating);
+
+				$this->db->where('content_id',$rating['content_id']);
+				$this->db->where('reader',$user['id']);
+
+				if(!$this->db->get('rating')->row_array())
+				{
+					$this->db->insert('rating',$rating);
+					$this->db->where('content_id',$rating['content_id']);
+
+					$content = $this->db->get('content')->row_array();
+
+					if($content)
+					{
+						$this->db->query('update user set rewards = rewards + ' . $rating['rating'] ' where id = ' . $content['author']);	
+					}
+				}
+				
 				return true;
 			}
 			else
