@@ -43,7 +43,7 @@
 
 					if($content)
 					{
-						$this->db->query('update user set rewards = rewards + ' . $rating['rating'] ' where id = ' . $content['author']);	
+						$this->db->query('update user set rewards = rewards + ' . $rating['rating'] . ' where id = ' . $content['author']);	
 					}
 				}
 				
