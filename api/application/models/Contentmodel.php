@@ -532,7 +532,7 @@
 				$date_now = new DateTime('now');
 
 				$age = $date_now->format('Y') - $date_birth->format('Y');
-				$query = 'Select content.*,rating.rating as rating from rating,content where rating.content_id = content.id and content.age_group <= ' .$age . ' group by rating.content_id limit 5';
+				$query = 'Select content.*,rating.rating as rating from rating,content where rating.content_id = content.id and content.age_group <= ' .$age . ' group by rating.content_id limit 4';
 				return $this->db->query($query)->result_array();
 			}
 			else
