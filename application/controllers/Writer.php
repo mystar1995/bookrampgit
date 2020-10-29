@@ -39,7 +39,7 @@ class Writer extends CI_Controller {
 	{
 		redirect_is_login();
 		$this->load->view('header',array('css'=>array('/assets/css/datatables.bootstrap4.min.css')));
-		$writer = $this->user->get_user('writer','APPROVED');
+		$writer = $this->user->get_user('writer','all');
 		$this->load->view('admin/user/writer',array('writer'=>$writer));
 		$this->load->view('footer',array('custom_js'=>array('/assets/js/jquery.datatables.min.js','/assets/js/datatables.bootstrap4.min.js','/assets/script/writer.js')));
 	}
@@ -48,7 +48,7 @@ class Writer extends CI_Controller {
 	{
 		redirect_is_login();
 		$this->load->view('header',array('css'=>array('/assets/css/datatables.bootstrap4.min.css')));
-		$writer = $this->user->get_user('writer','REJECTED');
+		$writer = $this->user->get_user('writer','all');
 		$this->load->view('admin/user/writer',array('writer'=>$writer,'type'=>'Rejected'));
 		$this->load->view('footer',array('custom_js'=>array('/assets/js/jquery.datatables.min.js','/assets/js/datatables.bootstrap4.min.js','/assets/script/writer.js')));	
 	}
@@ -58,7 +58,7 @@ class Writer extends CI_Controller {
 	{
 		redirect_is_login();
 		$this->load->view('header',array('css'=>array('/assets/css/datatables.bootstrap4.min.css')));
-		$writer = $this->user->get_user('writer','UNDERREVIEW');
+		$writer = $this->user->get_user('writer','all');
 		$this->load->view('admin/user/writer',array('writer'=>$writer,'type'=>'UNDERREVIEW'));
 		$this->load->view('footer',array('custom_js'=>array('/assets/js/jquery.datatables.min.js','/assets/js/datatables.bootstrap4.min.js','/assets/script/writer.js')));		
 	}
