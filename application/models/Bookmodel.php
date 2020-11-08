@@ -39,7 +39,7 @@
 				$this->db->where('id',$data['id']);
 				$user = get_logged_user();
 
-				if($user && $user['user_type'] == 'writer')
+				if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 				{
 					$this->db->where('author',$user['id']);
 				}
@@ -94,7 +94,7 @@
 			$this->db->where('id',$id);
 			$user = get_logged_user();
 
-			if($user && $user['user_type'] == 'writer')
+			if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 			{
 				$this->db->where('author',$user['id']);
 			}
@@ -108,7 +108,7 @@
 
 			$user = get_logged_user();
 
-			if($user && $user['user_type'] == 'writer')
+			if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 			{
 				$query .= ' and user.id = ' . $user['id'];
 			}
@@ -129,7 +129,7 @@
 
 			$user = get_logged_user();
 
-			if($user && $user['user_type'] == 'writer')
+			if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 			{
 				$this->db->where('author',$user['id']);
 			}
@@ -169,7 +169,7 @@
 
 			$user = get_logged_user();
 
-			if($user && $user['user_type'] == 'writer')
+			if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 			{
 				$this->db->where('author',$user['id']);
 			}
