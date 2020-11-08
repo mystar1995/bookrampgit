@@ -257,7 +257,7 @@
 					</li>
 				';
 			}
-			else if($user && $user['user_type'] == 'writer')
+			else if($user && ($user['user_type'] == 'writer' || $user['user_type'] == 'reader'))
 			{
 				$content =  '
 					<li class="pcoded-hasmenu">
